@@ -1,0 +1,4 @@
+absl-py
+google-api-python-client
+google-cloud-aiplatform
+kubernetes

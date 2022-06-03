@@ -1,0 +1,3 @@
+featurestores/benchmark_featurestore_abc123/entityTypes/human/entity/user_a@gmail.com
+featurestores/benchmark_featurestore_abc123/entityTypes/human/entity/user_b@gmail.com
+featurestores/benchmark_featurestore_abc123/entityTypes/human/entity/user_c@gmail.com

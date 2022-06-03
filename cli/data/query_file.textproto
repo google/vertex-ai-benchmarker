@@ -1,0 +1,17 @@
+# proto-file: featurestore_online_service.proto
+# proto-message: Requests
+
+requests_per_featurestore: {
+  featurestore_id: "benchmark_featurestore_abc123"
+  requests: {
+    read_feature_values_request: {
+      entity_type: "human"
+      entity_id: "${ENTITY_ID}"
+      feature_selector: {
+        id_matcher: {
+          ids: ["*"]
+        }
+      }
+    }
+  }
+}

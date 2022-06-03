@@ -1,0 +1,31 @@
+# Skip .class files
+*.class
+
+# Skip jars
+*.jar
+!gradle/wrapper/*
+!worker/gradle/wrapper/*
+
+# Ignore Gradle project-specific cache directory
+.gradle
+worker/.gradle
+
+# Ignore Gradle build output directory
+build/
+worker/build
+
+# Ignore DS_Store
+.DS_Store
+
+# Ignore compiled python
+*.pyc
+
+# Ignore vscode settings
+.vscode
+
+# Ignore generated export file
+cli/export.txt
+
+# Ignore Python virtual environment directory
+env/
+cli/env/

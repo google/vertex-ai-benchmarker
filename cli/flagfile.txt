@@ -1,0 +1,13 @@
+--project_id=project_foo
+--region=us-central1
+--gcs_log_path=gs://bucket_foo/fsloadtest_logs
+--feature_query_file_path=gs://bucket_foo/query_file.textproto
+--entity_file_path=gs://bucket_foo/entity_file.txt
+--use_gke
+--cluster_zone=us-central1
+--service_account=SERVICE_ACCOUNT_FOO@PROJECT_FOO.iam.gserviceaccount.com
+--target_qps=200
+--image_url=gcr.io/project_foo/fsloadtest:0.1
+--num_warmup_samples=20
+--num_samples=360
+--num_threads=40
