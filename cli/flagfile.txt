@@ -7,7 +7,7 @@
 --cluster_zone=us-central1
 --service_account=SERVICE_ACCOUNT_FOO@PROJECT_FOO.iam.gserviceaccount.com
 --target_qps=200
---image_url=gcr.io/project_foo/fsloadtest:0.1
+--image_url=gcr.io/project_foo/fsloadtest:0.7.0
 --num_warmup_samples=20
 --num_samples=360
 --num_threads=40
