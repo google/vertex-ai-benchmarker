@@ -105,7 +105,7 @@ class FrameworkRunner:
     """Create the BigQuery dataset for the test"""
     # Construct a BigQuery client object.
     client = bigquery.Client()
-    dataset_id = f'vertex_ai_benchmarker_results_{self._target_qps}_qps_{str(uuid4())[:5]}'
+    dataset_id = f'{self._project_id}.vertex_ai_benchmarker_results_{self._target_qps}_qps_{str(uuid4())[:5]}'
 
     # Check if dataset exists. If not, create a new one.
     try:
