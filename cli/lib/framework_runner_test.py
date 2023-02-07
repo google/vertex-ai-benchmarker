@@ -145,9 +145,9 @@ class FrameworkRunnerTest(absltest.TestCase):
 
     self.bq_mock.Client.assert_called_with()
     self.bq_client_mock.get_dataset.assert_called_with(
-        'vertex_ai_benchmarker_results_5_qps_d3d75')
+        'project.vertex_ai_benchmarker_results_5_qps_d3d75')
     self.bq_mock.Dataset.assert_called_with(
-        'vertex_ai_benchmarker_results_5_qps_d3d75')
+        'project.vertex_ai_benchmarker_results_5_qps_d3d75')
     self.bq_client_mock.create_dataset.assert_called_with(
         self.dataset_mock, timeout=30)
 
@@ -445,7 +445,7 @@ class FrameworkRunnerTest(absltest.TestCase):
         '--region=region --gcs_output_path=log-file-path '
         '--feature_query_file=/config/data/query_file.textproto '
         '--entity_file=gs://bucket/data/entity_file.txt --num_warmup_samples=5 '
-        '--bigquery_output_dataset=vertex_ai_benchmarker_results_5_qps_d3d75 project '
+        '--bigquery_output_dataset=project.vertex_ai_benchmarker_results_5_qps_d3d75 project '
         'data/query_file.textproto '
         'IyBwcm90by1maWxlOiBmZWF0dXJlc3RvcmVfb25saW5lX3NlcnZpY2UucHJvdG8KIyBwcm90by1tZXNzYWdlOiBSZXF1ZXN0cwoKcmVxdWVzdHNfcGVyX2ZlYXR1cmVzdG9yZTogewogIGZlYXR1cmVzdG9yZV9pZDogImJlbmNobWFya19mZWF0dXJlc3RvcmVfYWJjMTIzIgogIHJlcXVlc3RzOiB7CiAgICByZWFkX2ZlYXR1cmVfdmFsdWVzX3JlcXVlc3Q6IHsKICAgICAgZW50aXR5X3R5cGU6ICJodW1hbiIKICAgICAgZW50aXR5X2lkOiAiJHtFTlRJVFlfSUR9IgogICAgICBmZWF0dXJlX3NlbGVjdG9yOiB7CiAgICAgICAgaWRfbWF0Y2hlcjogewogICAgICAgICAgaWRzOiBbIioiXQogICAgICAgIH0KICAgICAgfQogICAgfQogIH0KfQo= '
         'example_entity_file.txt '
@@ -494,7 +494,7 @@ class FrameworkRunnerTest(absltest.TestCase):
         '--feature_query_file=/config/data/query_file.textproto '
         '--entity_file=/config/data/entity_file.txt '
         '--num_warmup_samples=5 '
-        '--bigquery_output_dataset=vertex_ai_benchmarker_results_7_qps_d3d75 '
+        '--bigquery_output_dataset=project.vertex_ai_benchmarker_results_7_qps_d3d75 '
         'projectfsloadtest-d3d75-job 1 image-url --target_qps=3 '
         '--num_threads=2 --sample_strategy=strategy '
         '--num_samples=10 --project_id=project --region=region '
@@ -502,7 +502,7 @@ class FrameworkRunnerTest(absltest.TestCase):
         '--feature_query_file=/config/data/query_file.textproto '
         '--entity_file=/config/data/entity_file.txt '
         '--num_warmup_samples=5 '
-        '--bigquery_output_dataset=vertex_ai_benchmarker_results_7_qps_d3d75 '
+        '--bigquery_output_dataset=project.vertex_ai_benchmarker_results_7_qps_d3d75 '
         'project',
         self.fdopen_text,
     )
