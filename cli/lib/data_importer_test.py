@@ -60,6 +60,8 @@ class DataImporterTest(absltest.TestCase):
 
         self.timestamp_mock = self.enter_context(
             absltest.mock.patch.object(data_importer, 'Timestamp', autospec=True))
+        # set default value for attr created in __init__()
+        self.timestamp_mock.return_value.nanos = 0
 
         # Open is a native method so it can't be autospec'ed
         self.open_mock = self.enter_context(
